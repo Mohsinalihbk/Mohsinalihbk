@@ -135,6 +135,29 @@ export default function WorkerFeedScreen() {
         </TouchableOpacity>
       </View>
 
+      {/* Platformer Game Banner */}
+      <TouchableOpacity
+        style={styles.gameBanner}
+        activeOpacity={0.85}
+        onPress={() => router.push('/game' as any)}
+      >
+        <View style={styles.gameBannerContent}>
+          <View style={styles.gameIconBadge}>
+            <Ionicons name="game-controller" size={24} color="#F59E0B" />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.gameBannerTitle}>🎮 Break Time? Play Platformer Game!</Text>
+            <Text style={styles.gameBannerSub}>
+              Double Jump, collect coins & beat high scores!
+            </Text>
+          </View>
+          <View style={styles.playGameBtn}>
+            <Text style={styles.playGameBtnText}>Play</Text>
+            <Ionicons name="arrow-forward" size={14} color="#FFFFFF" />
+          </View>
+        </View>
+      </TouchableOpacity>
+
       {/* Category Filter */}
       <View style={styles.filterSection}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.catScroll}>
@@ -216,6 +239,52 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
     color: '#0F172A',
+  },
+  gameBanner: {
+    marginHorizontal: 20,
+    marginBottom: 12,
+    backgroundColor: '#1E1B4B',
+    borderRadius: 16,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: '#4338CA',
+  },
+  gameBannerContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  gameIconBadge: {
+    backgroundColor: '#312E81',
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  gameBannerTitle: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  gameBannerSub: {
+    color: '#A5B4FC',
+    fontSize: 12,
+    marginTop: 2,
+  },
+  playGameBtn: {
+    backgroundColor: '#4F46E5',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  playGameBtnText: {
+    color: '#FFFFFF',
+    fontWeight: '700',
+    fontSize: 13,
   },
   myBidsBtn: {
     flexDirection: 'row',

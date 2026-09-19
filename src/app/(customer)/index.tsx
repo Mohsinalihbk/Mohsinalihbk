@@ -122,6 +122,28 @@ export default function CustomerDashboardScreen() {
         </TouchableOpacity>
       </View>
 
+      <TouchableOpacity
+        style={styles.gameBanner}
+        activeOpacity={0.85}
+        onPress={() => router.push('/game' as any)}
+      >
+        <View style={styles.gameBannerContent}>
+          <View style={styles.gameIconBadge}>
+            <Ionicons name="game-controller" size={24} color="#F59E0B" />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.gameBannerTitle}>🎮 Play 2D Platformer Game!</Text>
+            <Text style={styles.gameBannerSub}>
+              Double Jump, collect coins & defeat level monsters!
+            </Text>
+          </View>
+          <View style={styles.playGameBtn}>
+            <Text style={styles.playGameBtnText}>Play</Text>
+            <Ionicons name="arrow-forward" size={14} color="#FFFFFF" />
+          </View>
+        </View>
+      </TouchableOpacity>
+
       <View style={styles.actionBanner}>
         <View style={{ flex: 1 }}>
           <Text style={styles.bannerTitle}>Have an electrical or repair issue?</Text>
@@ -197,6 +219,53 @@ const styles = StyleSheet.create({
     borderRadius: 21,
     borderWidth: 2,
     borderColor: '#DBEAFE',
+  },
+  gameBanner: {
+    marginHorizontal: 20,
+    marginTop: 8,
+    marginBottom: 4,
+    backgroundColor: '#1E1B4B',
+    borderRadius: 16,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: '#4338CA',
+  },
+  gameBannerContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  gameIconBadge: {
+    backgroundColor: '#312E81',
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  gameBannerTitle: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '800',
+  },
+  gameBannerSub: {
+    color: '#A5B4FC',
+    fontSize: 12,
+    marginTop: 2,
+  },
+  playGameBtn: {
+    backgroundColor: '#4F46E5',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  playGameBtnText: {
+    color: '#FFFFFF',
+    fontWeight: '700',
+    fontSize: 13,
   },
   actionBanner: {
     marginHorizontal: 20,

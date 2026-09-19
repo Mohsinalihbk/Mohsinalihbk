@@ -11,6 +11,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" />
         <Stack.Screen name="auth" />
         <Stack.Screen name="profile" />
+        <Stack.Screen name="game" />
         <Stack.Screen name="(customer)/index" />
         <Stack.Screen name="(customer)/create" />
         <Stack.Screen name="(customer)/request/[id]" />
